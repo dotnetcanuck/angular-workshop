@@ -1,0 +1,10 @@
+<label>{{ tasklistLabel }}</label>
+<input id='newTask' name='newTask' type='text' [(ngModel)]='newTask' />
+<button type='submit' (click)='onTaskSubmitted()' [disabled]='!newTask'>Submit</button>
+<div>
+  <ul>
+    <li *ngFor='let item of taskList'>
+      {{ item }}
+    </li>
+  </ul>
+</div>
