@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from 'src/app/services/task.service';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
   taskList: string[];
@@ -23,5 +24,9 @@ export class TaskListComponent implements OnInit {
   public onTaskSubmitted(): void {
     this.taskService.addTask(this.newTask);
     this.newTask = null;
+  }
+
+  public reorderList(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.taskList, event.previousIndex, event.currentIndex);
   }
 }

@@ -1,4 +1,9 @@
-<div>
-  <button routerLink='/home'>Home</button>
-  <button routerLink='/tasks'>Tasks</button>
-</div>
+<mat-toolbar>
+  <h1>{{ title }}</h1>
+  <span class="spacer"></span>
+  <div>
+    <button mat-raised-button color="primary" routerLink='/home'>Home</button>
+    <button mat-raised-button color="primary" routerLink='/tasks'>Tasks</button>
+  </div>
+</mat-toolbar>
+

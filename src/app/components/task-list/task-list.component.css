@@ -1,0 +1,49 @@
+.mat-raised-button {
+  margin: 0 16px;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 1rem;
+  cursor: move;
+  display: block;
+  padding: 10px;
+}
+
+ul li:hover {
+  background-color: #ebebeb;
+  transition: 0.5s;
+}
+
+.cdk-drag-preview {
+  padding: 10px 10px 0 10px;
+  display: block;
+  background-color: #ebebeb;
+}
+
+.mat-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+form {
+  float: left;
+  width: 40%;
+}
+
+.mat-card {
+  float: right;
+  width: 50%;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
