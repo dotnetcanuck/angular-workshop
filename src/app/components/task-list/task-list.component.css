@@ -34,6 +34,12 @@ form {
 .mat-card {
   float: right;
   width: 50%;
+  border: 1px solid #f0f1fa;
+}
+
+.mat-card-header {
+  border-bottom: 1px solid #f0f1fa;
+  margin-bottom: 10px;
 }
 
 .cdk-drag-placeholder {
