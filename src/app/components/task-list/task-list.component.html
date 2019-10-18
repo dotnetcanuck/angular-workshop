@@ -1,6 +1,6 @@
 <h2 class="mat-title">Tasks</h2>
 <section>
-  <mat-card>
+  <mat-card class="tasklist">
     <mat-card-header>
       <mat-card-title>My Tasks</mat-card-title>
     </mat-card-header>
@@ -48,5 +48,7 @@
 </section>
 
 <section>
-  <app-task-details [task]="selectedTask$ | async"></app-task-details>
+  <div class="taskdetails">
+    <app-task-details [task]="selectedTask$ | async"></app-task-details>
+  </div>
 </section>

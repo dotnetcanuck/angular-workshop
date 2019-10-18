@@ -26,15 +26,19 @@ ul li:hover {
   margin-right: 5px;
 }
 
-form {
-  float: left;
-  width: 40%;
+.mat-card {
+  border: 1px solid #f0f1fa;
+  margin-bottom: 40px;
 }
 
-.mat-card {
+.tasklist {
+  float: left;
+  width: 50%;
+}
+
+.taskdetails {
   float: right;
   width: 50%;
-  border: 1px solid #f0f1fa;
 }
 
 .mat-card-header {
