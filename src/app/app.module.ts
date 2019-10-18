@@ -10,13 +10,15 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { TaskService } from './services/task.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material/material.module';
+import { TaskDetailsComponent } from './components/task-details/task-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskListComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    TaskDetailsComponent,
   ],
   imports: [
     FormsModule,

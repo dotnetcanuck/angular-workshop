@@ -1,35 +1,52 @@
 <h2 class="mat-title">Tasks</h2>
 <section>
-  <form>
-    <mat-form-field>
-      <input
-        matInput
-        [placeholder]="tasklistLabel"
-        id='newTask'
-        name='newTask'
-        type='text'
-        [(ngModel)]='newTask'>
-    </mat-form-field>
-    <button mat-raised-button type='submit' (click)='onTaskSubmitted()'
-      [disabled]='!newTask'>Submit</button>
-  </form>
-
   <mat-card>
     <mat-card-header>
       <mat-card-title>My Tasks</mat-card-title>
     </mat-card-header>
     <mat-card-content>
+      <form>
+        <mat-form-field>
+          <input
+            matInput
+            [placeholder]="tasklistLabel"
+            id="newTask"
+            name="newTask"
+            type="text"
+            [(ngModel)]="newTask"
+          />
+        </mat-form-field>
+        <button
+          mat-raised-button
+          type="submit"
+          (click)="onTaskSubmitted()"
+          [disabled]="!newTask"
+        >
+          Submit
+        </button>
+      </form>
+      <br />
       <ng-template #message>
         <p>You don't have any tasks yet.</p>
       </ng-template>
-      <div *ngIf="taskList.length> 0; else message">
+      <div *ngIf="taskList.length > 0; else message">
         <ul cdkDropList (cdkDropListDropped)="reorderList($event)">
-          <li *ngFor='let item of taskList' cdkDrag>
+          <li
+            *ngFor="let item of taskList"
+            cdkDrag
+            (dblclick)="onTaskDoubleClicked(item)"
+          >
             <mat-icon aria-hidden="false" aria-label="list icon">mood</mat-icon>
-            {{ item }}
+            {{ item.name }}
+            <br />
+            <span class="date">{{ item.date }}</span>
           </li>
         </ul>
       </div>
     </mat-card-content>
   </mat-card>
+</section>
+
+<section>
+  <app-task-details [task]="selectedTask$ | async"></app-task-details>
 </section>

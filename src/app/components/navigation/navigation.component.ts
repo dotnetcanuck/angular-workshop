@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TaskService } from '../../services/task.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navigation',
@@ -8,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit {
   title = 'Angular 101 Demo';
 
-  constructor() { }
+  taskCount: number = null;
+
+  constructor(private taskService: TaskService) { }
 
   ngOnInit() {
+    this.taskService.taskList$.subscribe(
+      next => this.taskCount = next.length,
+      error => this.taskCount = null
+    );
   }
 
 }
