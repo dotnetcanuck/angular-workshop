@@ -1,3 +1,10 @@
-<h1>{{ title }}</h1>
-<app-navigation></app-navigation>
-<router-outlet></router-outlet>
+<div class="mat-typography">
+  <mat-toolbar>
+    <h1>{{ title }}</h1>
+    <span class="spacer"></span>
+    <app-navigation></app-navigation>
+  </mat-toolbar>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

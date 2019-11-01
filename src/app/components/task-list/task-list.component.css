@@ -1,0 +1,57 @@
+.mat-raised-button {
+  margin: 0 16px;
+}
+
+.mat-icon {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.mat-card {
+  border: 1px solid #f0f1fa;
+}
+
+.tasklist {
+  float: left;
+  width: 50%;
+}
+
+.taskdetails {
+  float: right;
+  width: 30%;
+}
+
+.mat-card-header {
+  border-bottom: 1px solid #f0f1fa;
+  margin-bottom: 10px;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 1rem;
+  cursor: move;
+  display: block;
+  padding: 10px;
+}
+
+ul li:hover {
+  background-color: #ebebeb;
+  transition: 0.5s;
+}
+
+.cdk-drag-preview {
+  padding: 10px 10px 0 10px;
+  display: block;
+  background-color: #ebebeb;
+}
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+
