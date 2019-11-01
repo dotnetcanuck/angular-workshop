@@ -28,7 +28,6 @@ ul li:hover {
 
 .mat-card {
   border: 1px solid #f0f1fa;
-  margin-bottom: 40px;
 }
 
 .tasklist {
@@ -38,7 +37,7 @@ ul li:hover {
 
 .taskdetails {
   float: right;
-  width: 50%;
+  width: 30%;
 }
 
 .mat-card-header {
